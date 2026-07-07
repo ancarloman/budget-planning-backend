@@ -1,0 +1,5 @@
+node_modules
+dist
+src/serverr.ts
+src/db.ts
+.env
