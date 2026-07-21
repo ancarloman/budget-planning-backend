@@ -3,6 +3,6 @@ import { deleteItem, getPortfolioItems, postItem } from '../controllers/items.co
 
 export default async function itemsRoutes(app: FastifyInstance) {
   app.get('/:id', getPortfolioItems)
-  app.post('/additem', postItem);
-  app.delete('/deleteitem/:item_id', deleteItem);
+  app.post('/add-item', postItem);
+  app.delete('/delete-item/:item_id', deleteItem);
 }

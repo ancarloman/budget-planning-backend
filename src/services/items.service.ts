@@ -10,7 +10,7 @@ export function fetchPortfolioItems(portfolioId: string) {
 }
 
 export function addItemToPortfolio (item: { item_id: string; title: string; quantity: number; price: number; spent: number; transactions_id: number; portfolioId: string; created: string }) {
-    console.log('Adding item:', item) // Debugging line
+    console.log('Adding item:', item) 
   const { item_id, title, quantity, price, spent, transactions_id, portfolioId, created } = item
   return db.prepare(`
     INSERT INTO items (title, quantity, price, spent, portfolio_id)
@@ -19,8 +19,7 @@ export function addItemToPortfolio (item: { item_id: string; title: string; quan
 }
 
 export function deleteItemFromPortfolio ( item_id: number ) {
-    console.log('Deleting item:', item_id) // Debugging line
-  // const { item_id } = item
+    console.log('Deleting item:', item_id) 
   return db.prepare(`
     DELETE FROM items
     WHERE item_id = ?

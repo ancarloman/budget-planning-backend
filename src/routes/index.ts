@@ -7,6 +7,6 @@ import itemsRoutes from './items.routes'
 export default async function routes(app: FastifyInstance) {
   app.register(sidebarRoutes, { prefix: '/sidebar' })
   app.register(transactionRoutes)
-  app.register(portfolioRoutes)
+  app.register(portfolioRoutes, { prefix: '/portfolio' })
   app.register(itemsRoutes, { prefix: '/portfolio/items' })
 }
